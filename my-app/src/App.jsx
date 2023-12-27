@@ -1,7 +1,9 @@
 
 import './App.css'
 import Navbar from './components/Navbar'
-import Login from './components/Login'
+import Body from './components/Body'
+import Footer from './components/Footer'
+
 
 
 function App() {
@@ -10,10 +12,8 @@ function App() {
   return (
     <>
       <Navbar/> 
-     <Login/>
-     <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+       <Body/>
+       <Footer/>
     </>
   )
 }

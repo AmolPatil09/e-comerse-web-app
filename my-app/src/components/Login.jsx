@@ -120,7 +120,7 @@ export default function login() {
     <div className='w-full h-[550px] flex justify-center items-center bg-gradient-to-br from-violet-500 to-fuchsia-500'>
         <div className='text-center border-2 p-3 border-amber-100 rounded-md'>
         <h1 className='mt-6 sm:text-4xl text-2xl sm:font-bold my-2'>Login</h1>
-        <form className='h-auto w-[500px]' >
+        <form className='h-auto  sm:w-[500px] w-auto' >
 
 <div>
     <label className="block text-sm font-medium leading-6 text-left">Username</label>
@@ -131,7 +131,7 @@ export default function login() {
         required
         onChange={handleChange}
     />
-    {formDataError.userNameError && <div className='text-left'>{formDataError.userNameError}</div>}
+    {formDataError.userNameError && <div className='text-left text-sm'>{formDataError.userNameError}</div>}
 </div>
 <div>
     <label className="block text-sm font-medium leading-6  text-left">Password</label>
@@ -142,7 +142,7 @@ export default function login() {
         onChange={handleChange}
         aria-describedby="passwordHelpBlock"
     />
-    {formDataError.passwordError && <div className='text-left'>{formDataError.passwordError}</div>}
+    {formDataError.passwordError && <div className='text-left text-sm '>{formDataError.passwordError}</div>}
 </div>
 <div>
     <button className='bg-blue-400 w-full h-8 rounded-md mt-4' onClick={submitData}
