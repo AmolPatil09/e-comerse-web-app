@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { IoMenu } from "react-icons/io5"
 import { RxCross2 } from "react-icons/rx";
 import { TiShoppingCart } from "react-icons/ti";
+import {Link} from "react-router-dom"
 
 export default function 
 () {
@@ -20,16 +21,15 @@ export default function
             </div>
             <div>
             <ul className='hidden my-4 mx-5 sm:flex' >
-                <li className='mx-2 text-lg px-2 hover:bg-slate-700 rounded-md'>Home</li>
-                <li className='mx-2 text-lg px-2 hover:bg-slate-700 rounded-md'>Products</li>
-                <li className='mx-2 text-lg px-2 hover:bg-slate-700 rounded-md'>Categories</li>
-                <li className='mx-2 text-lg px-2 hover:bg-slate-700 rounded-md'>more</li>
-                <li className='mx-2 text-lg px-2 hover:bg-slate-700 rounded-md'>Contact</li>
+                <li className='mx-2 text-lg px-2 hover:bg-slate-700 rounded-md'><Link to='/'>Home</Link></li>
+                <li className='mx-2 text-lg px-2 hover:bg-slate-700 rounded-md'><Link to='/product'>Products</Link></li>
+                <li className='mx-2 text-lg px-2 hover:bg-slate-700 rounded-md'><Link to='/categories'>Categories</Link></li>
+                <li className='mx-2 text-lg px-2 hover:bg-slate-700 rounded-md'><Link to='/contact'>Contact</Link></li>
             </ul>
             </div>
             <div>
             <ul className='hidden my-4 mx-5 sm:flex' >
-                <li className=' m-auto  rounded-md mx-2'><TiShoppingCart className='h-8 w-8 '/></li>
+                <li className=' m-auto  rounded-md mx-2'><Link to='/cart'><TiShoppingCart className='h-8 w-8 '/></Link></li>
                 <li className='mx-3 text-lg px-3 hover:bg-red-600 rounded-md'>Logout</li>
              
             </ul>
