@@ -3,13 +3,32 @@ import { useState } from 'react';
 import { IoMenu } from "react-icons/io5"
 import { RxCross2 } from "react-icons/rx";
 import { TiShoppingCart } from "react-icons/ti";
-import {Link} from "react-router-dom"
+import { IoMdSearch } from "react-icons/io";
+import { FaCaretDown } from "react-icons/fa";
+import {Link} from "react-router-dom";
 
 export default function 
 () {
     const [mobileMenu,setMobileMenu]=useState(false);
     const [isLogin,setIsLogin]=useState(true);
 
+    const DropdownLinks = [
+  {
+    id: 1,
+    name: "Trending Products",
+    link: "/#",
+  },
+  {
+    id: 2,
+    name: "Best Selling",
+    link: "/#",
+  },
+  {
+    id: 3,
+    name: "Top Rated",
+    link: "/#",
+  },
+];
   return (
     <>
     {
@@ -21,11 +40,44 @@ export default function
             </div>
             <div>
             <ul className='hidden my-4 mx-5 sm:flex' >
-                <li className='mx-2 text-lg px-2 hover:bg-slate-700 rounded-md'><Link to='/'>Home</Link></li>
-                <li className='mx-2 text-lg px-2 hover:bg-slate-700 rounded-md'><Link to='/product'>Products</Link></li>
-                <li className='mx-2 text-lg px-2 hover:bg-slate-700 rounded-md'><Link to='/categories'>Categories</Link></li>
-                <li className='mx-2 text-lg px-2 hover:bg-slate-700 rounded-md'><Link to='/contact'>Contact</Link></li>
+                <li className='mx-2 text-lg px-2 hover:bg-purple-400 rounded-md'><Link to='/'>Home</Link></li>
+                <li className='mx-2 text-lg px-2 hover:bg-purple-400 rounded-md'><Link to='/product'>Top Rated</Link></li>
+                <li className='mx-2 text-lg px-2 hover:bg-purple-400 rounded-md'><Link to='/categories'>Kids Wears</Link></li>
+                <li className='mx-2 text-lg px-2 hover:bg-purple-400 rounded-md'><Link to='/contact'>Electronics</Link></li>
+                <li className="group relative hover:bg-purple-400 cursor-pointer mx-2 text-lg px-2 rounded-md">
+            <a href="#" className="flex items-center gap-[2px] ">
+              Trending Products
+              <span>
+                <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
+              </span>
+            </a>
+            <div className="absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white p-2 text-black shadow-md">
+              <ul>
+                {DropdownLinks.map((data) => (
+                  <li key={data.id}>
+                    <a
+                      href={data.link}
+                      className="inline-block w-full rounded-md p-2 hover:bg-primary/20 "
+                    >
+                      {data.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
             </ul>
+            </div>
+            <div className='m-auto'>
+            <div className="relative group hidden sm:block">
+              <input
+                type="text"
+                placeholder="search"
+                className="w-[200px] text-black sm:w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800  "
+              />
+              <IoMdSearch className="text-gray-500 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-3"  />
+            </div>
+
             </div>
             <div>
             <ul className='hidden my-4 mx-5 sm:flex' >
@@ -38,14 +90,37 @@ export default function
                 mobileMenu?<RxCross2 className='my-3  mx-5 h-10 w-10 min-w-6 sm:hidden' onClick={()=>{setMobileMenu(false)}}/>:<IoMenu className='my-3  mx-5 h-10 w-10 min-w-6 sm:hidden' onClick={()=>{setMobileMenu(true)}}/>
             }
      </div>
+    
      {
           mobileMenu&&<ul className='sm:hidden absolute h-auto bg-white w-screen  text-black' >
           
                 <li className='mx-3 text-lg block'>Home</li>
-                <li className='mx-3 text-lg block'>Products</li>
-                <li className='mx-3 text-lg block'>Categories</li>
-                <li className='mx-3 text-lg block'>more</li>
-                <li className='mx-3 text-lg block'>Contact</li>
+                <li className='mx-3 text-lg block'>Top Rated</li>
+                <li className='mx-3 text-lg block'>Kids Wears</li>
+                <li className='mx-3 text-lg block'>Electronics</li>
+                          <li className="group relative cursor-pointer mx-3 ">
+            <a href="#" className="flex items-center gap-[2px] text-lg">
+              Trending Products
+              <span>
+                <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
+              </span>
+            </a>
+            <div className="absolute z-[9999] hidden group-hover:block w-[200px] text-left rounded-md bg-white p-2 text-black shadow-md">
+              <ul>
+                {DropdownLinks.map((data) => (
+                  <li key={data.id}>
+                    <a
+                      href={data.link}
+                      className="inline-block w-full rounded-md p-2 hover:bg-primary/20  "
+                    >
+                      {data.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
+
       </ul>
         }
 
@@ -62,8 +137,8 @@ export default function
             </div>
             <div>
             <ul className='hidden my-4 mx-5 sm:flex' >
-                <li className='mx-3 text-lg px-3 hover:bg-slate-700 rounded-md'>Login</li>
-                <li className='mx-3 text-lg px-3 hover:bg-slate-700 rounded-md'>SignUp</li>
+                <li className='mx-3 text-lg px-3 hover:bg-purple-400 rounded-md'>Login</li>
+                <li className='mx-3 text-lg px-3 hover:bg-purple-400 rounded-md'>SignUp</li>
              
             </ul>
             </div>
