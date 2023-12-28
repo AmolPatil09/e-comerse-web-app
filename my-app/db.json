@@ -1,0 +1,66 @@
+
+{
+    "productData":[
+        {
+           "productName" :"Max martine",
+           "img":"src/assets/shirt1.jpeg",
+           "categorier":"men regular wear",
+           "price":799
+           
+         
+
+        },
+        {
+            "productName" :"blue band",
+            "img":"src/assets/shirt2.jpeg",
+            "categorier":"men regular wear",
+            "price":999
+         },
+         {
+            "productName" :"Tanip",
+            "img":"src/assets/shirt3.jpeg",
+            "categorier":"men regular wear",
+            "price":999
+
+         },
+         {
+            "productName" :"Youth First",
+            "img":"src/assets/shirt1.jpeg",
+            "categorier":"men regular wear",
+            "price":1999
+         },
+         {
+             "productName" :"First choice",
+             "img":"src/assets/shirt2.jpeg",
+             "categorier":"men regular wear",
+             "price":1500
+          },
+          {
+             "productName" :"level",
+             "img":"src/assets/shirt3.jpeg",
+             "categorier":"men regular wear",
+             "price":1400
+          },
+          {
+            "productName" :"KK Garment",
+            "img":"src/assets/shirt1.jpeg",
+            "categorier":"men regular wear",
+            "price":599
+         },
+         {
+             "productName" :"Meleno",
+             "img":"src/assets/shirt2.jpeg",
+             "categorier":"men regular wear",
+             "price":899
+
+          },
+          {
+             "productName" :"Remond",
+             "img":"src/assets/shirt1.jpeg",
+             "categorier":"men regular wear",
+             "price":999
+
+
+          }
+    ]
+}
