@@ -12,9 +12,7 @@ import {RouterProvider,createBrowserRouter} from "react-router-dom";
 const router =createBrowserRouter([
   {path:"/",element:<App/>,
   children:[
-   {
-    path:'', element:<Home/>
-   },
+   
    {
     path:'home', element:<Home/>,
    },
@@ -26,7 +24,7 @@ const router =createBrowserRouter([
     path:'login', element:<Login/>
    },
    {
-    path:'product', element:<Product/>
+    path:'', element:<Product/>
    },
    {
     path:'contact', element:<Contact/>

@@ -4,31 +4,17 @@ import { IoMenu } from "react-icons/io5"
 import { RxCross2 } from "react-icons/rx";
 import { TiShoppingCart } from "react-icons/ti";
 import { IoMdSearch } from "react-icons/io";
-import { FaCaretDown } from "react-icons/fa";
 import {Link} from "react-router-dom";
+import { useSelector ,useDispatch} from 'react-redux';
+import {FaSearch} from "react-icons/fa"
+
+
 
 export default function 
-() {
+() {  
+    const isLogin=useSelector((store)=>store.isLogin);
+    const dispatch=useDispatch();
     const [mobileMenu,setMobileMenu]=useState(false);
-    const [isLogin,setIsLogin]=useState(true);
-
-    const DropdownLinks = [
-  {
-    id: 1,
-    name: "Trending Products",
-    link: "/#",
-  },
-  {
-    id: 2,
-    name: "Best Selling",
-    link: "/#",
-  },
-  {
-    id: 3,
-    name: "Top Rated",
-    link: "/#",
-  },
-];
   return (
     <>
     {
@@ -47,6 +33,7 @@ export default function
               <input
                 type="text"
                 placeholder="search"
+                onChange={()=>dispatch({type:"SET_SERCHTERM",payload:{serchTerm:event.target.value}})}
                 className="w-[200px] text-black sm:w-[200px] group-hover:w-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800  "
               />
               <IoMdSearch className="text-gray-500 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-3"  />
@@ -62,69 +49,29 @@ export default function
                 mobileMenu?<RxCross2 className='my-3  mx-5 h-10 w-10 min-w-6 sm:hidden' onClick={()=>{setMobileMenu(false)}}/>:<IoMenu className='my-3  mx-5 h-10 w-10 min-w-6 sm:hidden' onClick={()=>{setMobileMenu(true)}}/>
             }
      </div>
-    {
-       <div className='w-full hidden sm:flex justify-center bg-purple-500 '>
-       <ul className='hidden my-4 mx-5 sm:flex' >
-           <li className='mx-2  md:text-lg px-2 hover:bg-purple-400 rounded-md'><Link to='/'>Home</Link></li>
-           <li className='mx-2  md:text-lg px-2 hover:bg-purple-400 rounded-md'><Link to='/product'>Top Rated</Link></li>
-           <li className='mx-2  md:text-lg px-2 hover:bg-purple-400 rounded-md'><Link to='/categories'>Kids Wears</Link></li>
-           <li className='mx-2  md:text-lg px-2 hover:bg-purple-400 rounded-md'><Link to='/contact'>Electronics</Link></li>
-           <li className="group relative hover:bg-purple-400 cursor-pointer mx-2 text-lg px-2 rounded-md">
-       <a href="#" className="flex items-center gap-[2px] ">
-         Trending Products
-         <span>
-           <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
-         </span>
-       </a>
-       <div className="absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white p-2 text-black shadow-md">
-         <ul>
-           {DropdownLinks.map((data) => (
-             <li key={data.id}>
-               <a
-                 href={data.link}
-                 className="inline-block w-full rounded-md p-2 hover:bg-primary/20 "
-               >
-                 {data.name}
-               </a>
-             </li>
-           ))}
-         </ul>
-       </div>
-     </li>
-       </ul>
-       </div>
-    }
+     <div className="flex items-center bg-gradient-to-r from-violet-600 to-fuchsia-600  mx-auto justify-normal sm:hidden w-full">
+     
+      <input
+        type="text"
+        placeholder="Search..."
+        onChange={()=>dispatch({type:"SET_SERCHTERM",payload:{serchTerm:event.target.value}})}
+        className="border border-gray-300 h-10 ml-[10%] w-[70%] rounded p-2 focus:outline-none focus:border-blue-500 my-1"
+      />
+      <button className="bg-blue-500 text-white h-10 p-2 w-[10%] mr-[10%] min-w-8 max-w-12 rounded my-1">
+        <FaSearch />
+      </button>
+     </div>
+    
+    
      {
-          mobileMenu&&<ul className='sm:hidden absolute h-auto bg-white w-screen  text-black' >
-          
-                <li className='mx-3 md:text-lg block'>Home</li>
-                <li className='mx-3  md:text-lg block'>Top Rated</li>
-                <li className='mx-3  md:text-lg block'>Kids Wears</li>
-                <li className='mx-3  md:text-lg block'>Electronics</li>
-                          <li className="group relative cursor-pointer mx-3 ">
-            <a href="#" className="flex items-center gap-[2px] text-lg">
-              Trending Products
-              <span>
-                <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
-              </span>
-            </a>
-            <div className="absolute z-[9999] hidden group-hover:block w-[200px] text-left rounded-md bg-white p-2 text-black shadow-md">
-              <ul>
-                {DropdownLinks.map((data) => (
-                  <li key={data.id}>
-                    <a
-                      href={data.link}
-                      className="inline-block w-full rounded-md p-2 hover:bg-primary/20  "
-                    >
-                      {data.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </li>
-
-      </ul>
+          mobileMenu&&<ul className='flex flex-col absolute bg-white w-full  ' >
+         <li className='mx-3 md:text-lg block' onClick={()=>dispatch({type:"CHANGE_CATEGORY",payload:{category:"" }})}>All</li>
+           <li className='mx-3 md:text-lg block' onClick={()=>dispatch({type:"CHANGE_CATEGORY",payload:{category:"Men" }})}>Men</li>
+           <li className='mx-3 md:text-lg block' onClick={()=>dispatch({type:"CHANGE_CATEGORY",payload:{category:"Women" }})}>Women</li>
+           <li className='mx-3 md:text-lg block' onClick={()=>dispatch({type:"CHANGE_CATEGORY",payload:{category:"Kids" }})}>Kids Wears</li>
+           <li className='mx-3 md:text-lg block' onClick={()=>dispatch({type:"CHANGE_CATEGORY",payload:{category:"Electronics" }})}>Electronics</li>
+       
+       </ul>
         }
 
     </div>

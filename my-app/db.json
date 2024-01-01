@@ -1,66 +1,460 @@
 
 {
-    "productData":[
-        {
-           "productName" :"Max martine",
-           "img":"src/assets/shirt1.jpeg",
-           "categorier":"men regular wear",
-           "price":799
-           
-         
-
+   "products": [
+      {
+        "id": 1,
+        "name": "Men's Shirt",
+        "img":"src/assets/shirt1.jpeg",
+        "price": 39.99,
+        "description": "Classic and comfortable shirt for men.",
+        "category": "Men",
+        "stock": 50
+      },
+      {
+        "id": 2,
+        "name": "Women's Dress",
+        "img":"src/assets/wdress1.jpeg",
+        "price": 49.99,
+        "description": "Elegant dress for women for any occasion.",
+        "category": "Women",
+        "stock": 30
+      },
+      {
+        "id": 3,
+        "name": "Kids' Toy Set",
+        "img":"src/assets/kides1.jpeg",
+        "price": 29.99,
+        "description": "Fun and educational toy set for kids.",
+        "category": "Kids",
+        "stock": 40
+      },
+      {
+        "id": 4,
+        "name": "Electric Blender",
+        "img":"src/assets/blender.jpeg",
+        "price": 79.99,
+        "description": "Powerful blender for your kitchen needs.",
+        "category": "Electronics",
+        "stock": 20
+      },
+      {
+        "id": 5,
+        "name": "Men's Sneakers",
+        "img":"src/assets/snekers.jpeg",
+        "price": 59.99,
+        "description": "Stylish and comfortable sneakers for men.",
+        "category": "Men",
+        "stock": 45
+      },
+      {
+         "id": 6,
+         "name": "Women's Handbag",
+         "img":"src/assets/handbag.jpeg",
+         "price": 69.99,
+         "description": "Fashionable handbag for women.",
+         "category": "Women",
+         "stock": 25
+       },
+       {
+         "id": 7,
+         "name": "Kids' Educational Book Set",
+         "img":"src/assets/book.jpeg",
+         "price": 19.99,
+         "description": "Engaging book set for kids to learn and enjoy.",
+         "category": "Kids",
+         "stock": 35
+       },
+       {
+         "id": 8,
+         "name": "Bluetooth Headphones",
+         "img":"src/assets/speaker.jpeg",
+         "price": 89.99,
+         "description": "Wireless headphones for an immersive audio experience.",
+         "category": "Electronics",
+         "stock": 15
+       },
+       {
+         "id": 9,
+         "name": "Men's Watch",
+         "img":"src/assets/shirt1.jpeg",
+         "price": 109.99,
+         "description": "Stylish and durable watch for men.",
+         "category": "Men",
+         "stock": 30
+       },
+       {
+         "id": 10,
+         "name": "Women's Sunglasses",
+         "img":"src/assets/wdress1.jpeg",
+         "price": 34.99,
+         "description": "Trendy sunglasses for women.",
+         "category": "Women",
+         "stock": 40
+       },
+       {
+         "id": 11,
+         "name": "Kids' Playhouse",
+         "img":"src/assets/book.jpeg",
+         "price": 129.99,
+         "description": "Colorful playhouse for hours of imaginative play.",
+         "category": "Kids",
+         "stock": 20
+       },
+       {
+         "id": 12,
+         "name": "Wireless Charger",
+         "img":"src/assets/speaker.jpeg",
+         "price": 24.99,
+         "description": "Convenient wireless charger for your devices.",
+         "category": "Electronics",
+         "stock": 25
+       },
+       {
+         "id": 13,
+         "name": "Men's Backpack",
+         "img":"src/assets/shirt1.jpeg",
+         "price": 49.99,
+         "description": "Durable and spacious backpack for men.",
+         "category": "Men",
+         "stock": 30
+       },
+       {
+         "id": 14,
+         "name": "Women's Running Shoes",
+         "img":"src/assets/snekers.jpeg",
+         "price": 59.99,
+         "description": "Comfortable and stylish running shoes for women.",
+         "category": "Women",
+         "stock": 35
+       },
+       {
+         "id": 15,
+         "name": "Kids' Puzzle Set",
+         "img":"src/assets/book.jpeg",
+         "price": 14.99,
+         "description": "Educational puzzle set for kids' cognitive development.",
+         "category": "Kids",
+         "stock": 40
+       },  {
+         "id": 16,
+         "name": "Smartphone Holder for Bikes",
+         "img":"src/assets/speaker.jpeg",
+         "price": 19.99,
+         "description": "Securely mount your smartphone on your bike.",
+         "category": "Electronics",
+         "stock": 15
+       },
+       {
+         "id": 17,
+         "name": "Men's Casual Jeans",
+         "img":"src/assets/speaker.jpeg",
+         "price": 44.99,
+         "description": "Comfortable and stylish jeans for men.",
+         "category": "Men",
+         "stock": 20
+       },
+       {
+         "id": 18,
+         "name": "Women's Fitness Leggings",
+         "img":"src/assets/wdress1.jpeg",
+         "price": 29.99,
+         "description": "Stretchy and breathable leggings for workouts.",
+         "category": "Women",
+         "stock": 25
+       },
+       {
+         "id": 19,
+         "name": "Kids' Art Supplies Set",
+         "img":"src/assets/book.jpeg",
+         "price": 16.99,
+         "description": "A variety of art supplies for creative kids.",
+         "category": "Kids",
+         "stock": 30
+       },
+       {
+         "id": 20,
+         "name": "Portable Power Bank",
+         "img":"src/assets/speaker.jpeg",
+         "price": 34.99,
+         "description": "Keep your devices charged on the go.",
+         "category": "Electronics",
+         "stock": 18
+       }, {
+         "id": 21,
+         "name": "Men's Leather Wallet",
+         "img":"src/assets/shirt1.jpeg",
+         "price": 27.99,
+         "description": "Classic leather wallet for men.",
+         "category": "Men",
+         "stock": 22
+       },
+       {
+         "id": 22,
+         "name": "Women's Wristwatch",
+         "img":"src/assets/wdress1.jpeg",
+         "price": 54.99,
+         "description": "Elegant wristwatch for women.",
+         "category": "Women",
+         "stock": 28
+       },
+       {
+         "id": 23,
+         "name": "Kids' Remote Control Car",
+         "img":"src/assets/book.jpeg",
+         "price": 39.99,
+         "description": "Fun remote control car for kids.",
+         "category": "Kids",
+         "stock": 15
+       },
+       {
+         "id": 24,
+         "name": "Bluetooth Speaker",
+         "img":"src/assets/speaker.jpeg",
+         "price": 79.99,
+         "description": "High-quality Bluetooth speaker for immersive sound.",
+         "category": "Electronics",
+         "stock": 20
+       },
+       {
+         "id": 25,
+         "name": "Men's Sportswear Set",
+         "img":"src/assets/shirt1.jpeg",
+         "price": 69.99,
+         "description": "Comfortable sportswear set for men.",
+         "category": "Men",
+         "stock": 25
+       },
+       {
+         "id": 26,
+         "name": "Men's Shirt",
+         "img":"src/assets/shirt1.jpeg",
+         "price": 39.99,
+         "description": "Classic and comfortable shirt for men.",
+         "category": "Men",
+         "stock": 50
+       },
+       {
+         "id": 27,
+         "name": "Women's Dress",
+         "img":"src/assets/wdress1.jpeg",
+         "price": 49.99,
+         "description": "Elegant dress for women for any occasion.",
+         "category": "Women",
+         "stock": 30
+       },
+       {
+         "id": 28,
+         "name": "Kids' Toy Set",
+         "img":"src/assets/kides1.jpeg",
+         "price": 29.99,
+         "description": "Fun and educational toy set for kids.",
+         "category": "Kids",
+         "stock": 40
+       },
+       {
+         "id": 29,
+         "name": "Electric Blender",
+         "img":"src/assets/blender.jpeg",
+         "price": 79.99,
+         "description": "Powerful blender for your kitchen needs.",
+         "category": "Electronics",
+         "stock": 20
+       },
+       {
+         "id": 30,
+         "name": "Men's Sneakers",
+         "img":"src/assets/snekers.jpeg",
+         "price": 59.99,
+         "description": "Stylish and comfortable sneakers for men.",
+         "category": "Men",
+         "stock": 45
+       },
+       {
+          "id": 31,
+          "name": "Women's Handbag",
+          "img":"src/assets/handbag.jpeg",
+          "price": 69.99,
+          "description": "Fashionable handbag for women.",
+          "category": "Women",
+          "stock": 25
         },
         {
-            "productName" :"blue band",
-            "img":"src/assets/shirt2.jpeg",
-            "categorier":"men regular wear",
-            "price":999
-         },
-         {
-            "productName" :"Tanip",
-            "img":"src/assets/shirt3.jpeg",
-            "categorier":"men regular wear",
-            "price":999
-
-         },
-         {
-            "productName" :"Youth First",
-            "img":"src/assets/shirt1.jpeg",
-            "categorier":"men regular wear",
-            "price":1999
-         },
-         {
-             "productName" :"First choice",
-             "img":"src/assets/shirt2.jpeg",
-             "categorier":"men regular wear",
-             "price":1500
-          },
-          {
-             "productName" :"level",
-             "img":"src/assets/shirt3.jpeg",
-             "categorier":"men regular wear",
-             "price":1400
-          },
-          {
-            "productName" :"KK Garment",
-            "img":"src/assets/shirt1.jpeg",
-            "categorier":"men regular wear",
-            "price":599
-         },
-         {
-             "productName" :"Meleno",
-             "img":"src/assets/shirt2.jpeg",
-             "categorier":"men regular wear",
-             "price":899
-
-          },
-          {
-             "productName" :"Remond",
-             "img":"src/assets/shirt1.jpeg",
-             "categorier":"men regular wear",
-             "price":999
-
-
-          }
-    ]
+          "id": 32,
+          "name": "Kids' Educational Book Set",
+          "img":"src/assets/book.jpeg",
+          "price": 19.99,
+          "description": "Engaging book set for kids to learn and enjoy.",
+          "category": "Kids",
+          "stock": 35
+        },
+        {
+          "id": 33,
+          "name": "Bluetooth Headphones",
+          "img":"src/assets/speaker.jpeg",
+          "price": 89.99,
+          "description": "Wireless headphones for an immersive audio experience.",
+          "category": "Electronics",
+          "stock": 15
+        },
+        {
+          "id": 34,
+          "name": "Men's Watch",
+          "img":"src/assets/shirt1.jpeg",
+          "price": 109.99,
+          "description": "Stylish and durable watch for men.",
+          "category": "Men",
+          "stock": 30
+        },
+        {
+          "id": 35,
+          "name": "Women's Sunglasses",
+          "img":"src/assets/wdress1.jpeg",
+          "price": 34.99,
+          "description": "Trendy sunglasses for women.",
+          "category": "Women",
+          "stock": 40
+        },
+        {
+          "id": 36,
+          "name": "Kids' Playhouse",
+          "img":"src/assets/book.jpeg",
+          "price": 129.99,
+          "description": "Colorful playhouse for hours of imaginative play.",
+          "category": "Kids",
+          "stock": 20
+        },
+        {
+          "id": 37,
+          "name": "Wireless Charger",
+          "img":"src/assets/speaker.jpeg",
+          "price": 24.99,
+          "description": "Convenient wireless charger for your devices.",
+          "category": "Electronics",
+          "stock": 25
+        },
+        {
+          "id": 38,
+          "name": "Men's Backpack",
+          "img":"src/assets/shirt1.jpeg",
+          "price": 49.99,
+          "description": "Durable and spacious backpack for men.",
+          "category": "Men",
+          "stock": 30
+        },
+        {
+          "id": 39,
+          "name": "Women's Running Shoes",
+          "img":"src/assets/snekers.jpeg",
+          "price": 59.99,
+          "description": "Comfortable and stylish running shoes for women.",
+          "category": "Women",
+          "stock": 35
+        },
+        {
+          "id": 40,
+          "name": "Kids' Puzzle Set",
+          "img":"src/assets/book.jpeg",
+          "price": 14.99,
+          "description": "Educational puzzle set for kids' cognitive development.",
+          "category": "Kids",
+          "stock": 40
+        },  {
+          "id": 41,
+          "name": "Smartphone Holder for Bikes",
+          "img":"src/assets/speaker.jpeg",
+          "price": 19.99,
+          "description": "Securely mount your smartphone on your bike.",
+          "category": "Electronics",
+          "stock": 15
+        },
+        {
+          "id": 42,
+          "name": "Men's Casual Jeans",
+          "img":"src/assets/speaker.jpeg",
+          "price": 44.99,
+          "description": "Comfortable and stylish jeans for men.",
+          "category": "Men",
+          "stock": 20
+        },
+        {
+          "id": 43,
+          "name": "Women's Fitness Leggings",
+          "img":"src/assets/wdress1.jpeg",
+          "price": 29.99,
+          "description": "Stretchy and breathable leggings for workouts.",
+          "category": "Women",
+          "stock": 25
+        },
+        {
+          "id": 44,
+          "name": "Kids' Art Supplies Set",
+          "img":"src/assets/book.jpeg",
+          "price": 16.99,
+          "description": "A variety of art supplies for creative kids.",
+          "category": "Kids",
+          "stock": 30
+        },
+        {
+          "id": 45,
+          "name": "Portable Power Bank",
+          "img":"src/assets/speaker.jpeg",
+          "price": 34.99,
+          "description": "Keep your devices charged on the go.",
+          "category": "Electronics",
+          "stock": 18
+        }, {
+          "id": 46,
+          "name": "Men's Leather Wallet",
+          "img":"src/assets/shirt1.jpeg",
+          "price": 27.99,
+          "description": "Classic leather wallet for men.",
+          "category": "Men",
+          "stock": 22
+        },
+        {
+          "id": 47,
+          "name": "Women's Wristwatch",
+          "img":"src/assets/wdress1.jpeg",
+          "price": 54.99,
+          "description": "Elegant wristwatch for women.",
+          "category": "Women",
+          "stock": 28
+        },
+        {
+          "id": 48,
+          "name": "Kids' Remote Control Car",
+          "img":"src/assets/book.jpeg",
+          "price": 39.99,
+          "description": "Fun remote control car for kids.",
+          "category": "Kids",
+          "stock": 15
+        },
+        {
+          "id": 49,
+          "name": "Bluetooth Speaker",
+          "img":"src/assets/speaker.jpeg",
+          "price": 79.99,
+          "description": "High-quality Bluetooth speaker for immersive sound.",
+          "category": "Electronics",
+          "stock": 20
+        },
+        {
+          "id": 50,
+          "name": "Men's Sportswear Set",
+          "img":"src/assets/shirt1.jpeg",
+          "price": 69.99,
+          "description": "Comfortable sportswear set for men.",
+          "category": "Men",
+          "stock": 25
+        },
+        {
+         "id": 48,
+         "name": "Kids' Remote Control Car",
+         "img":"src/assets/book.jpeg",
+         "price": 39.99,
+         "description": "Fun remote control car for kids.",
+         "category": "Kids",
+         "stock": 15
+       }
+   ]
 }
